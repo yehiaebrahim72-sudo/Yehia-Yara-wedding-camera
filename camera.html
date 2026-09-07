@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7eef2">
+  <title>Camera | Yehia & Yara</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="camera-card">
+      <div class="topbar">
+        <div>
+          <strong id="hello"></strong>
+          <small>Your photos and video will upload automatically when you finish.</small>
+        </div>
+        <button id="flipBtn" class="icon-btn" type="button" title="Switch camera">↻</button>
+      </div>
+
+      <div class="preview-wrap">
+        <video id="preview" autoplay muted playsinline></video>
+        <div id="recordBadge" class="record-badge hidden">● جاري التسجيل <span id="timer">20</span></div>
+      </div>
+
+      <div class="limits">
+        <span>Photos: <b id="photoCount">0</b>/10</span>
+        <span>الفيديو: <b id="videoStatus">Not recorded</b></span>
+      </div>
+
+      <div class="controls">
+        <button id="photoBtn" class="shutter" type="button" aria-label="Take photo">●</button>
+        <button id="videoBtn" class="secondary" type="button">🎥 Record 20-second video</button>
+      </div>
+
+      <div id="gallery" class="gallery"></div>
+
+      <div class="actions">
+        <button id="finishBtn" class="primary" type="button">Finish & Upload</button>
+      </div>
+      <p id="status" class="status"></p>
+    </section>
+  </main>
+
+  <canvas id="canvas" class="hidden"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="camera.js"></script>
+</body>
+</html>

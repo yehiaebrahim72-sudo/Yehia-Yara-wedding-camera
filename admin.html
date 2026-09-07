@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7eef2">
+  <title>Admin | Yehia & Yara</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page admin-page">
+    <section id="loginCard" class="card">
+      <div class="rings">Y & Y</div>
+      <h1>Admin Dashboard</h1>
+      <form id="loginForm">
+        <label>Email Address</label>
+        <input id="email" type="email" required autocomplete="username">
+        <label>Password</label>
+        <input id="password" type="password" required autocomplete="current-password">
+        <button class="primary" type="submit">Sign In</button>
+      </form>
+      <p id="loginStatus" class="status"></p>
+    </section>
+
+    <section id="dashboard" class="card hidden">
+      <div class="admin-head">
+        <div>
+          <h1>Wedding Photos & Videos</h1>
+          <p id="summary"></p>
+        </div>
+        <button id="logoutBtn" class="secondary" type="button">Log Out</button>
+      </div>
+      <button id="refreshBtn" class="primary small" type="button">Refresh</button>
+      <div id="mediaGrid" class="admin-grid"></div>
+      <p id="adminStatus" class="status"></p>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
